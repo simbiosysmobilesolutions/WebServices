@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/BLUE"
+    tools:context="com.simbiosyscorp.tutorials.webservices.RestActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZipCode"
+        android:textSize="25dp"
+        android:id="@+id/zipLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Store Name"
+        android:textSize="25dp"
+        android:id="@+id/storeLabel"
+        android:layout_below="@+id/zipLabel"
+        android:layout_marginTop="85dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zip"
+        android:hint="Enter Zip Code"
+        android:layout_toEndOf="@+id/storeLabel"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/store"
+        android:hint="Enter Store Name"
+        android:layout_alignTop="@+id/storeLabel"
+       android:layout_alignLeft="@+id/zip" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button_text"
+        android:text="JSON Response"
+        android:id="@+id/getJson"
+        android:layout_below="@+id/store"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/getJson" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button_text"
+        android:text="XML Response"
+        android:id="@+id/getxml"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/getJson"
+        android:layout_alignEnd="@+id/listView" />
+
+</RelativeLayout>
